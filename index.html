@@ -3,196 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>São Paulo FC - O Tri-Mundial</title>
+    <title>São Paulo FC - História e Títulos</title>
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            background-color: #f4f4f9;
-            color: #111;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #111;
+            color: white;
         }
 
-        /* Cabeçalho */
         header {
-            background-color: #000;
-            color: #fff;
-            padding: 20px 0;
+            background: linear-gradient(135deg, #d00000, #111, #ffffff);
             text-align: center;
-            border-bottom: 5px solid #d00000;
+            padding: 40px 20px;
         }
 
-        .stripe-bar {
-            height: 8px;
-            background: linear-gradient(to right, #d00000 33%, #fff 33% 66%, #000 66%);
+        .escudo {
+            width: 180px;
+            max-width: 80%;
+            margin-bottom: 20px;
         }
 
         header h1 {
-            font-size: 2.5rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-top: 10px;
+            font-size: 42px;
+            margin-bottom: 10px;
         }
 
         header p {
-            color: #aaa;
-            font-size: 1.1rem;
+            font-size: 20px;
         }
 
-        /* Hero Banner */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1200') center/cover;
-            color: white;
-            padding: 80px 20px;
+        nav {
+            background: #000;
+            padding: 15px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
-        .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 15px;
-            color: #fff;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 25px;
-            color: #ddd;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: #d00000;
+        nav a {
             color: white;
             text-decoration: none;
+            margin: 0 15px;
             font-weight: bold;
-            border-radius: 5px;
-            transition: 0.3s;
         }
 
-        .btn:hover {
-            background-color: #a00000;
+        nav a:hover {
+            color: #e00000;
         }
 
-        /* Seção de Conquistas */
-        .titles-section {
-            max-width: 1100px;
-            margin: 50px auto;
-            padding: 0 20px;
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 50px 20px;
         }
 
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 40px;
-            position: relative;
+        h2 {
+            color: #e00000;
+            font-size: 32px;
+            margin-bottom: 20px;
+            border-left: 5px solid white;
+            padding-left: 10px;
         }
 
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background-color: #d00000;
-            margin: 10px auto 0;
+        .historia {
+            line-height: 1.8;
+            font-size: 18px;
         }
 
-        .grid {
+        .titulos {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
+            margin-top: 30px;
         }
 
         .card {
-            background: white;
+            background: #222;
+            border: 2px solid #d00000;
+            border-radius: 12px;
             padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             text-align: center;
-            border-top: 4px solid #d00000;
-            transition: transform 0.3s;
+            transition: 0.3s;
         }
 
         .card:hover {
             transform: translateY(-5px);
+            background: #2d2d2d;
         }
 
         .card h3 {
-            font-size: 1.5rem;
+            color: white;
             margin-bottom: 10px;
         }
 
-        .card .count {
-            font-size: 2.5rem;
+        .numero {
+            color: #e00000;
+            font-size: 40px;
             font-weight: bold;
-            color: #d00000;
-            margin-bottom: 10px;
         }
 
-        /* Rodapé */
+        .curiosidades {
+            background: #e00000;
+            border-radius: 15px;
+            padding: 30px;
+            line-height: 1.8;
+        }
+
         footer {
-            background-color: #111;
-            color: #888;
+            background: #000;
             text-align: center;
-            padding: 20px;
-            margin-top: 50px;
-            border-top: 1px solid #222;
+            padding: 30px;
+            margin-top: 30px;
         }
 
-        footer p {
-            font-size: 0.9rem;
+        footer span {
+            color: #e00000;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 30px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
         }
     </style>
 </head>
+
 <body>
 
-    <div class="stripe-bar"></div>
-
     <header>
+        <!-- Substitua pelo arquivo do escudo que você colocar no GitHub -->
+        <img
+            class="escudo"
+            src="https://upload.wikimedia.org/wikipedia/commons/1/17/Sao_Paulo_Futebol_Clube.png"
+            alt="Escudo do São Paulo Futebol Clube">
+
         <h1>São Paulo Futebol Clube</h1>
-        <p>O Clube da Fé • Trikas</p>
+        <p>Tricolor Paulista 🇾🇪</p>
     </header>
 
-    <section class="hero">
-        <h2>Clube Bem Amado</h2>
-        <p>Dentre os grandes, és o primeiro. Conheça a história e as principais conquistas do soberano do futebol brasileiro.</p>
-        <a href="#titulos" class="btn">Ver Conquistas</a>
+    <nav>
+        <a href="#historia">História</a>
+        <a href="#titulos">Títulos</a>
+        <a href="#curiosidades">Curiosidades</a>
+    </nav>
+
+    <section id="historia">
+        <h2>História</h2>
+
+        <div class="historia">
+            <p>
+                O São Paulo Futebol Clube é um dos clubes mais tradicionais
+                e vitoriosos do futebol brasileiro. O clube foi fundado em
+                25 de janeiro de 1930 e posteriormente refundado em 1935.
+            </p>
+
+            <br>
+
+            <p>
+                Conhecido como Tricolor Paulista, o São Paulo tem como cores
+                oficiais o vermelho, o branco e o preto. Seu estádio é o
+                Estádio Cícero Pompeu de Toledo, conhecido popularmente como
+                Morumbi.
+            </p>
+
+            <br>
+
+            <p>
+                Ao longo de sua história, o clube conquistou importantes
+                títulos nacionais e internacionais, tornando-se uma das
+                grandes forças do futebol da América do Sul.
+            </p>
+        </div>
     </section>
 
-    <section class="titles-section" id="titulos">
-        <h2 class="section-title">Principais Títulos</h2>
-        <div class="grid">
+    <section id="titulos">
+        <h2>Principais Títulos</h2>
+
+        <div class="titulos">
+
             <div class="card">
-                <div class="count">3</div>
-                <h3>Mundiais de Clubes</h3>
+                <div class="numero">3</div>
+                <h3>Mundiais</h3>
+                <p>1981, 1992 e 2005</p>
+            </div>
+
+            <div class="card">
+                <div class="numero">3</div>
+                <h3>Libertadores</h3>
                 <p>1992, 1993 e 2005</p>
             </div>
+
             <div class="card">
-                <div class="count">3</div>
-                <h3>Copa Libertadores</h3>
-                <p>1992, 1993 e 2005</p>
+                <div class="numero">1</div>
+                <h3>Copa Sul-Americana</h3>
+                <p>2012</p>
             </div>
+
             <div class="card">
-                <div class="count">6</div>
+                <div class="numero">6</div>
                 <h3>Campeonatos Brasileiros</h3>
                 <p>1977, 1986, 1991, 2006, 2007 e 2008</p>
             </div>
+
             <div class="card">
-                <div class="count">1</div>
+                <div class="numero">1</div>
                 <h3>Copa do Brasil</h3>
                 <p>2023</p>
             </div>
+
+            <div class="card">
+                <div class="numero">25+</div>
+                <h3>Campeonatos Paulistas</h3>
+                <p>Conquistas estaduais ao longo da história</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="curiosidades">
+        <h2>Curiosidades</h2>
+
+        <div class="curiosidades">
+            <p>
+                🔴 O São Paulo é conhecido como Tricolor Paulista.
+            </p>
+
+            <p>
+                ⚪ O Morumbi é um dos estádios mais tradicionais do Brasil.
+            </p>
+
+            <p>
+                ⚫ O clube possui três títulos da Copa Libertadores.
+            </p>
+
+            <p>
+                🏆 O São Paulo conquistou três títulos mundiais.
+            </p>
+
+            <p>
+                🇾🇪 As cores vermelho, branco e preto são uma das principais
+                marcas do clube.
+            </p>
         </div>
     </section>
 
     <footer>
-        <p>Projeto criado para o GitHub Pages • São Paulo FC Fan Page</p>
+        <p>Site sobre o <span>São Paulo Futebol Clube</span></p>
+        <p>Feito para projeto no GitHub 🚀</p>
     </footer>
 
 </body>
-</html>7
+</html>
